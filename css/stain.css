@@ -123,3 +123,9 @@ ul {
 li::marker {
   color: var(--primary-color);
 }
+
+:not(pre) code {
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.2rem;
+  background-color: var(--ghost-bg-color);
+}
