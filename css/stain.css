@@ -113,3 +113,13 @@ pre {
   border-radius: 0.3rem;
   background-color: var(--ghost-bg-color);
 }
+
+ol,
+ul {
+  padding-left: 1rem;
+  line-height: 1.5;
+}
+
+li::marker {
+  color: var(--primary-color);
+}
