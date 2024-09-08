@@ -118,7 +118,7 @@ pre {
 ol,
 ul {
   padding-left: 1rem;
-  line-height: 1.5;
+  line-height: 1.75;
 }
 
 :not(li) > ol,
