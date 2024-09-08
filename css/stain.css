@@ -75,3 +75,8 @@ h6::before {
     counter(h6) ". ";
   counter-increment: h6;
 }
+
+a {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
