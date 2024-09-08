@@ -1,13 +1,15 @@
 :root {
   --black: #2a2a2a;
   --white: #fbfbfb;
-  --grey: #929292;
+  --light-grey: #f3f3f3;
+  --medium-grey: #929292;
   --red: #db4d52;
 
   --fg-color: var(--black);
   --bg-color: var(--white);
   --primary-color: var(--red);
-  --ghost-color: var(--grey);
+  --ghost-fg-color: var(--medium-grey);
+  --ghost-bg-color: var(--light-grey);
 }
 
 @page {
@@ -44,7 +46,7 @@ h3::before,
 h4::before,
 h5::before,
 h6::before {
-  color: var(--ghost-color);
+  color: var(--ghost-fg-color);
   font-size: 0.75em;
 }
 
@@ -97,5 +99,17 @@ a {
 
 hr {
   border: 0;
-  border-top: 2px solid var(--ghost-color);
+  border-top: 2px solid var(--ghost-fg-color);
+}
+
+blockquote {
+  margin-left: 0;
+  padding-left: 1rem;
+  border-left: 4px solid var(--primary-color);
+}
+
+pre {
+  padding: 0.8rem;
+  border-radius: 0.3rem;
+  background-color: var(--ghost-bg-color);
 }
