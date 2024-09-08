@@ -112,6 +112,7 @@ pre {
   padding: 0.8rem;
   border-radius: 0.3rem;
   background-color: var(--ghost-bg-color);
+  border: 1px solid var(--ghost-fg-color);
 }
 
 ol,
@@ -124,8 +125,9 @@ li::marker {
   color: var(--primary-color);
 }
 
-:not(pre) code {
+:not(pre) > code {
   padding: 0.2rem 0.4rem;
   border-radius: 0.2rem;
+  border: 1px solid var(--ghost-fg-color);
   background-color: var(--ghost-bg-color);
 }
