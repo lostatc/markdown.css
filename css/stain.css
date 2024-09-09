@@ -110,7 +110,7 @@ blockquote {
 
 pre {
   padding: 0.8rem;
-  border-radius: 0.3rem;
+  border-radius: 0.2rem;
   background-color: var(--ghost-bg-color);
   border: 1px solid var(--ghost-fg-color);
 }
