@@ -1,15 +1,14 @@
 :root {
-  --black: #2a2a2a;
+  --black: #333333;
   --white: #fbfbfb;
-  --light-grey: #f4f4f4;
-  --medium-grey: #929292;
   --red: #db4d52;
 
   --fg-color: var(--black);
   --bg-color: var(--white);
   --primary-color: var(--red);
-  --ghost-fg-color: var(--medium-grey);
-  --ghost-bg-color: var(--light-grey);
+  --ghost-fg-color: #929292;
+  --ghost-bg-color: #f4f4f4;
+  --border-color: #dcdcdc;
 
   --title-weight: 400;
   --heading-weight: 400;
@@ -280,4 +279,20 @@ ol > li::marker {
 
 ul > li::marker {
   font-weight: var(--ul-marker-weight);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table > thead > tr > th {
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--fg-color);
+}
+
+table > tbody > tr > :is(th, td) {
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--border-color);
 }
