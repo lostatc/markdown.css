@@ -188,6 +188,10 @@ b {
   font-weight: var(--bold-weight);
 }
 
+del {
+  color: var(--ghost-fg-color);
+}
+
 a {
   color: var(--primary-color);
   text-decoration: underline;
