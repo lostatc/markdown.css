@@ -226,7 +226,7 @@ code {
 }
 
 :not(pre) > code {
-  padding: 0.2rem 0.4rem;
+  padding: 0.1rem 0.2rem;
   border-radius: 0.2rem;
   border: 1px solid var(--ghost-fg-color);
   background-color: var(--ghost-bg-color);
