@@ -15,6 +15,8 @@
   --heading-weight: 400;
   --body-weight: 300;
   --bold-weight: 600;
+  --ol-marker-weight: 400;
+  --ul-marker-weight: 800;
 }
 
 @font-face {
@@ -36,8 +38,24 @@
 @font-face {
   font-family: "Open Sans";
   font-style: normal;
+  font-weight: 400;
+  src: local("Open Sans Regular"),
+    url("../fonts/OpenSans-VariableFont_wdth\,wght.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
   font-weight: 600;
   src: local("Open Sans SemiBold"),
+    url("../fonts/OpenSans-VariableFont_wdth\,wght.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 800;
+  src: local("Open Sans ExtraBold"),
     url("../fonts/OpenSans-VariableFont_wdth\,wght.ttf") format("ttf");
 }
 
@@ -56,6 +74,11 @@
   src: local("Open Sans SemiBold Italic"),
     url("../fonts/OpenSans-Italic-VariableFont_wdth\,wght.ttf") format("ttf");
 }
+
+/*
+ * We support both Fira Mono and Fira Code because Fira Code supports
+ * ligatures, which we only want to use in code blocks.
+ */
 
 @font-face {
   font-family: "Fira Mono";
@@ -208,11 +231,6 @@ blockquote {
   border-left: 4px solid var(--primary-color);
 }
 
-/*
- * Fira Code differs from Fira Mono in that it supports ligatures, but we only
- * want to show ligatures in code blocks.
- */
-
 pre {
   font-family: "Fira Mono", monospace;
   padding: 0.8rem;
@@ -251,6 +269,10 @@ li::marker {
   color: var(--primary-color);
 }
 
-ul li::marker {
-  font-weight: var(--bold-weight);
+ol > li::marker {
+  font-weight: var(--ol-marker-weight);
+}
+
+ul > li::marker {
+  font-weight: var(--ul-marker-weight);
 }
