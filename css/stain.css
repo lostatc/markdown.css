@@ -256,9 +256,14 @@ ul {
   line-height: 1.75;
 }
 
+/* 
+ * This affects the padding of lists relative to the page, but not the padding
+ * of nested lists relative to their parent list.
+ */
+
 :not(li) > ol,
 :not(li) > ul {
-  padding-left: 1.5rem;
+  padding-left: 2rem;
 }
 
 li {
