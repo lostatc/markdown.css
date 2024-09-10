@@ -250,3 +250,7 @@ li {
 li::marker {
   color: var(--primary-color);
 }
+
+ul li::marker {
+  font-weight: var(--bold-weight);
+}
