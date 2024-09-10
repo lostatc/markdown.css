@@ -1,7 +1,10 @@
 # markdown.css
 
-To render a markdown file as a PDF using a custom style sheet:
+This repository contains a collection of CSS stylesheets for rendering markdown
+files as PDFs via Pandoc/Weasyprint.
+
+To render a markdown file using Pandoc:
 
 ```shell
-pandoc --pdf-engine weasyprint --css ./markdown.css -s -o output.pdf input.md
+pandoc --pdf-engine weasyprint --css ./css/style.css -s -o output.pdf input.md
 ```
