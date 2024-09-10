@@ -10,6 +10,51 @@
   --primary-color: var(--red);
   --ghost-fg-color: var(--medium-grey);
   --ghost-bg-color: var(--light-grey);
+
+  --title-weight: 400;
+  --heading-weight: 400;
+  --body-weight: 300;
+  --bold-weight: 600;
+}
+
+@font-face {
+  font-family: "Roboto Slab";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Roboto Slab Regular"),
+    url("../fonts/RobotoSlab-VariableFont_wght.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: local("Open Sans Light"),
+    url("../fonts/OpenSans-VariableFont_wdth\,wght.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: local("Open Sans SemiBold"),
+    url("../fonts/OpenSans-VariableFont_wdth\,wght.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 300;
+  src: local("Open Sans Light Italic"),
+    url("../fonts/OpenSans-Italic-VariableFont_wdth\,wght.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 600;
+  src: local("Open Sans SemiBold Italic"),
+    url("../fonts/OpenSans-Italic-VariableFont_wdth\,wght.ttf") format("ttf");
 }
 
 @page {
@@ -24,10 +69,23 @@
 body {
   color: var(--fg-color);
 
+  font-family: "Open Sans", sans-serif;
+  font-weight: var(--body-weight);
+
   counter-reset: h2;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Roboto Slab", serif;
+}
+
 h1 {
+  font-weight: var(--title-weight);
   font-size: 1.9em;
 }
 
@@ -36,6 +94,7 @@ h3,
 h4,
 h5,
 h6 {
+  font-weight: var(--heading-weight);
   font-size: 1.3em;
   margin-top: 0;
   margin-bottom: 0;
@@ -90,6 +149,11 @@ h6::before {
   content: counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) "."
     counter(h6) ". ";
   counter-increment: h6;
+}
+
+strong,
+b {
+  font-weight: var(--bold-weight);
 }
 
 a {
