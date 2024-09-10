@@ -57,6 +57,38 @@
     url("../fonts/OpenSans-Italic-VariableFont_wdth\,wght.ttf") format("ttf");
 }
 
+@font-face {
+  font-family: "Fira Mono";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Fira Mono Regular"),
+    url("../fonts/FiraMono-Regular.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Fira Mono";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Fira Mono Bold"), url("../fonts/FiraMono-Bold.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Fira Code";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Fira Code Regular"),
+    url("../fonts/FiraCode-VariableFont_wght.ttf") format("ttf");
+}
+
+/* The bold weight may be used for syntax highlighting. */
+@font-face {
+  font-family: "Fira Code";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Fira Code Bold"),
+    url("../fonts/FiraCode-VariableFont_wght.ttf") format("ttf");
+}
+
 @page {
   margin-left: 0.5in;
   margin-right: 0.5in;
@@ -172,11 +204,28 @@ blockquote {
   border-left: 4px solid var(--primary-color);
 }
 
+/*
+ * Fira Code differs from Fira Mono in that it supports ligatures, but we only
+ * want to show ligatures in code blocks.
+ */
+
 pre {
+  font-family: "Fira Mono", monospace;
   padding: 0.8rem;
   border-radius: 0.2rem;
   background-color: var(--ghost-bg-color);
   border: 1px solid var(--ghost-fg-color);
+}
+
+code {
+  font-family: "Fira Code", monospace;
+}
+
+:not(pre) > code {
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.2rem;
+  border: 1px solid var(--ghost-fg-color);
+  background-color: var(--ghost-bg-color);
 }
 
 ol,
@@ -196,11 +245,4 @@ li {
 
 li::marker {
   color: var(--primary-color);
-}
-
-:not(pre) > code {
-  padding: 0.2rem 0.4rem;
-  border-radius: 0.2rem;
-  border: 1px solid var(--ghost-fg-color);
-  background-color: var(--ghost-bg-color);
 }
