@@ -1,3 +1,5 @@
+# Callouts Document
+
 ```callout:info
 This is something you should take note of.
 ```

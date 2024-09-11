@@ -1,5 +1,5 @@
 :root {
-  --fg-color: #34495e;
+  --fg-color: #222f3d;
   --bg-color: #ffffff;
 
   --info-fg-color: #94bfff;
@@ -61,6 +61,7 @@
 
 body {
   font-family: "Source Sans 3", sans-serif;
+  font-size: 11pt;
   color: var(--fg-color);
   background-color: var(--bg-color);
 }
@@ -82,7 +83,7 @@ pre:is(.callout\:info, .callout\:tip, .callout\:warning, .callout\:danger) {
   border-style: solid;
   padding: 0.5rem;
   border-radius: 0.4rem;
-  font-size: 0.8rem;
+  font-size: 0.8em;
 }
 pre:is(.callout\:info, .callout\:tip, .callout\:warning, .callout\:danger)
   > code {
