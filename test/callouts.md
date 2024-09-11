@@ -31,6 +31,8 @@ fn fibonacci(n: u32) -> u32 {
 }
 ```
 
+---
+
 ## Heading 2
 
 Lorem ipsum odor amet, consectetuer adipiscing elit.
