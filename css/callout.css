@@ -5,7 +5,7 @@
   --info-bg-color: #f5f9ff;
   --info-border-color: #a8cbff;
 
-  --tip-fg-color: #acf09a;
+  --tip-fg-color: #99eb83;
   --tip-bg-color: #fbfffa;
   --tip-border-color: #caf0c0;
 
@@ -20,6 +20,8 @@
   --callout-header-font-size: 0.8rem;
   --callout-header-font-weight: 600;
 }
+
+/* TODO: Use a sans-serif font for callouts. */
 
 pre.callout\:info::before {
   display: block;
