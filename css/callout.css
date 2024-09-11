@@ -2,7 +2,7 @@
   --fg-color: #222f3d;
   --bg-color: #ffffff;
   --primary-color: #42b983;
-  --ghost-bg-color: #f8f8f8;
+  --ghost-bg-color: #fbfbfb;
   --code-fg-color: #e96a04;
 
   --info-fg-color: #94bfff;
@@ -78,6 +78,12 @@ a {
   color: var(--code-fg-color);
   background-color: var(--ghost-bg-color);
   padding: 0.1rem 0.2rem;
+  border-radius: 0.1rem;
+}
+
+pre {
+  background-color: var(--ghost-bg-color);
+  padding: 0.6rem;
   border-radius: 0.1rem;
 }
 

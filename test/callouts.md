@@ -7,24 +7,36 @@ This is something you should take note of.
 [Link](https://example.com), **Strong**, *Emphasis*, ***Both***, ~~Strikethrough~~, `code`
 
 Lorem ipsum odor amet, consectetuer adipiscing elit. Vel libero nascetur quam
-diam felis, litora luctus risus. Placerat parturient ligula sed tempus vel ac
-erat odio. Nascetur mi vulputate rutrum morbi vulputate. 
+diam felis, litora luctus risus.
 
 ```callout:tip
 Here's a tip to get you started.
 ```
-Lorem ipsum odor amet, consectetuer adipiscing elit.
 
 ```callout:warning
 Be cautious when you do this.
 ```
-Lorem ipsum odor amet, consectetuer adipiscing elit. Vel libero nascetur quam
-diam felis, litora luctus risus. 
 
 ```callout:danger
 This is a dangerous operation; you should never do this.
 ```
 
-Lorem ipsum odor amet, consectetuer adipiscing elit. Vel libero nascetur quam
-diam felis, litora luctus risus. Placerat parturient ligula sed tempus vel ac
-erat odio. Nascetur mi vulputate rutrum morbi vulputate. 
+```rust
+fn fibonacci(n: u32) -> u32 {
+    match n {
+        0 => 1,
+        1 => 1,
+        _ => fibonacci(n - 1) + fibonacci(n - 2),
+    }
+}
+```
+
+## Heading 2
+
+### Heading 3
+
+#### Heading 4
+
+##### Heading 5
+
+###### Heading 6
