@@ -1,11 +1,17 @@
 :root {
   --fg-color: #000000;
 
-  --info-bg-color: #f0f6ff;
+  --info-fg-color: #94bfff;
+  --info-bg-color: #f5f9ff;
   --info-border-color: #a8cbff;
 
+  --tip-fg-color: #acf09a;
   --tip-bg-color: #fbfffa;
   --tip-border-color: #caf0c0;
+
+  --warning-fg-color: #ffc214;
+  --warning-bg-color: #fff9e6;
+  --warning-border-color: #ffe7a3;
 
   --callout-padding: 0.5rem;
   --callout-border-radius: 0.4rem;
@@ -20,7 +26,7 @@ pre.callout\:info::before {
   content: "ℹ️ Info";
   font-size: var(--callout-header-font-size);
   font-weight: var(--callout-header-font-weight);
-  color: var(--callout-header-fg-color);
+  color: var(--info-fg-color);
 }
 
 pre.callout\:info {
@@ -35,12 +41,27 @@ pre.callout\:tip::before {
   content: "💡 Tip";
   font-size: var(--callout-header-font-size);
   font-weight: var(--callout-header-font-weight);
-  color: var(--callout-header-fg-color);
+  color: var(--tip-fg-color);
 }
 
 pre.callout\:tip {
   background-color: var(--tip-bg-color);
   border: 1px solid var(--tip-border-color);
+  padding: var(--callout-padding);
+  border-radius: var(--callout-border-radius);
+}
+
+pre.callout\:warning::before {
+  display: block;
+  content: "⚠️ Warning";
+  font-size: var(--callout-header-font-size);
+  font-weight: var(--callout-header-font-weight);
+  color: var(--warning-fg-color);
+}
+
+pre.callout\:warning {
+  background-color: var(--warning-bg-color);
+  border: 1px solid var(--warning-border-color);
   padding: var(--callout-padding);
   border-radius: var(--callout-border-radius);
 }
