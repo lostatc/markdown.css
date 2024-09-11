@@ -7,6 +7,8 @@
   --code-fg-color: #e96a04;
 
   --base-font-size: 9pt;
+  --ol-marker-weight: 400;
+  --ul-marker-weight: 900;
 
   --info-fg-color: #94bfff;
   --info-bg-color: #f5f9ff;
@@ -63,6 +65,14 @@
   font-weight: 700;
   src: local("NotoSans Bold Italic"),
     url("../fonts/NotoSans-Italic-VariableFont_wdth\,wght.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 900;
+  src: local("Noto Sans Black"),
+    url("../fonts/NotoSans-VariableFont_wdth\,wght.ttf") format("ttf");
 }
 
 /*
@@ -211,6 +221,34 @@ pre {
   background-color: var(--ghost-bg-color);
   padding: 0.6rem;
   border-radius: 0.1rem;
+}
+
+ol,
+ul {
+  padding-left: 1rem;
+  line-height: 1.5;
+}
+
+/* 
+ * This affects the padding of lists relative to the page, but not the padding
+ * of nested lists relative to their parent list.
+ */
+
+:not(li) > ol,
+:not(li) > ul {
+  padding-left: 1.5rem;
+}
+
+li {
+  text-indent: 4px;
+}
+
+ol > li::marker {
+  font-weight: var(--ol-marker-weight);
+}
+
+ul > li::marker {
+  font-weight: var(--ul-marker-weight);
 }
 
 pre:is(
