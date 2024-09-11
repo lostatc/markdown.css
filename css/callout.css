@@ -2,8 +2,11 @@
   --fg-color: #222f3d;
   --bg-color: #ffffff;
   --primary-color: #42b983;
+  --ghost-fg-color: #bababa;
   --ghost-bg-color: #fbfbfb;
   --code-fg-color: #e96a04;
+
+  --base-font-size: 9pt;
 
   --info-fg-color: #94bfff;
   --info-bg-color: #f5f9ff;
@@ -62,6 +65,43 @@
     url("../fonts/NotoSans-Italic-VariableFont_wdth\,wght.ttf") format("ttf");
 }
 
+/*
+ * We support both Fira Mono and Fira Code because Fira Code supports
+ * ligatures, which we only want to use in code blocks.
+ */
+
+@font-face {
+  font-family: "Fira Mono";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Fira Mono Regular"),
+    url("../fonts/FiraMono-Regular.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Fira Mono";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Fira Mono Bold"), url("../fonts/FiraMono-Bold.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Fira Code";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Fira Code Regular"),
+    url("../fonts/FiraCode-VariableFont_wght.ttf") format("ttf");
+}
+
+/* The bold weight may be used for syntax highlighting. */
+@font-face {
+  font-family: "Fira Code";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Fira Code Bold"),
+    url("../fonts/FiraCode-VariableFont_wght.ttf") format("ttf");
+}
+
 @page {
   margin-left: 0.5in;
   margin-right: 0.5in;
@@ -73,7 +113,7 @@
 
 body {
   font-family: "Noto Sans", sans-serif;
-  font-size: 9pt;
+  font-size: var(--base-font-size);
   color: var(--fg-color);
 }
 
@@ -86,33 +126,73 @@ h6 {
   margin-bottom: 0;
 }
 
+h1::before,
+h2::before,
+h3::before,
+h4::before,
+h5::before,
+h6::before {
+  color: var(--ghost-fg-color);
+  font-size: var(--base-font-size);
+  font-family: "Fira Mono", monospace;
+  font-weight: bold;
+}
+
 h1 {
   font-size: 2em;
+}
+
+h1::before {
+  content: "H1 ";
 }
 
 h2 {
   font-size: 1.8em;
 }
 
+h2::before {
+  content: "H2 ";
+}
+
 h3 {
   font-size: 1.6em;
+}
+
+h3::before {
+  content: "H3 ";
 }
 
 h4 {
   font-size: 1.4em;
 }
 
+h4::before {
+  content: "H4 ";
+}
+
 h5 {
   font-size: 1.2em;
+}
+
+h5::before {
+  content: "H5 ";
 }
 
 h6 {
   font-size: 1em;
 }
 
+h6::before {
+  content: "H6 ";
+}
+
 a {
   color: var(--primary-color);
   font-weight: 600;
+}
+
+del {
+  color: var(--ghost-fg-color);
 }
 
 :not(pre) > code {
@@ -122,7 +202,12 @@ a {
   border-radius: 0.1rem;
 }
 
+code {
+  font-family: "Fira Code", monospace;
+}
+
 pre {
+  font-family: "Fira Mono", monospace;
   background-color: var(--ghost-bg-color);
   padding: 0.6rem;
   border-radius: 0.1rem;
