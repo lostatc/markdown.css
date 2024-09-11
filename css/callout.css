@@ -20,48 +20,48 @@
 }
 
 @font-face {
-  font-family: "Source Sans 3";
+  font-family: "Inter";
   font-style: normal;
   font-weight: 400;
-  src: local("Source Sans 3 Regular"),
-    url("../fonts/SourceSans3-VariableFont_wght.ttf") format("ttf");
+  src: local("Inter Regular"),
+    url("../fonts/Inter-VariableFont_opsz\,wght.ttf") format("ttf");
 }
 
 @font-face {
-  font-family: "Source Sans 3";
+  font-family: "Inter";
   font-style: italic;
   font-weight: 400;
-  src: local("Source Sans 3 Italic"),
-    url("../fonts/SourceSans3-Italic-VariableFont_wght.ttf") format("ttf");
+  src: local("Inter Italic"),
+    url("../fonts/Inter-Italic-VariableFont_opsz\,wght.ttf") format("ttf");
 }
 
 @font-face {
-  font-family: "Source Sans 3";
+  font-family: "Inter";
   font-style: normal;
   font-weight: 600;
-  src: local("Source Sans 3 SemiBold"),
-    url("../fonts/SourceSans3-VariableFont_wght.ttf") format("ttf");
+  src: local("Inter SemiBold"),
+    url("../fonts/Inter-VariableFont_opsz\,wght.ttf") format("ttf");
 }
 
 @font-face {
-  font-family: "Source Sans 3";
+  font-family: "Inter";
   font-style: normal;
   font-weight: 700;
-  src: local("Source Sans 3 Bold"),
-    url("../fonts/SourceSans3-VariableFont_wght.ttf") format("ttf");
+  src: local("Inter Bold"),
+    url("../fonts/Inter-VariableFont_opsz\,wght.ttf") format("ttf");
 }
 
 @font-face {
-  font-family: "Source Sans 3";
+  font-family: "Inter";
   font-style: italic;
   font-weight: 700;
-  src: local("Source Sans 3 Bold Italic"),
-    url("../fonts/SourceSans3-Italic-VariableFont_wght.ttf") format("ttf");
+  src: local("Inter Bold Italic"),
+    url("../fonts/Inter-Italic-VariableFont_opsz\,wght.ttf") format("ttf");
 }
 
 body {
-  font-family: "Source Sans 3", sans-serif;
-  font-size: 11pt;
+  font-family: "Inter", sans-serif;
+  font-size: 9pt;
   color: var(--fg-color);
   background-color: var(--bg-color);
 }
@@ -87,7 +87,7 @@ pre:is(.callout\:info, .callout\:tip, .callout\:warning, .callout\:danger) {
 }
 pre:is(.callout\:info, .callout\:tip, .callout\:warning, .callout\:danger)
   > code {
-  font-family: "Fira Sans", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 pre.callout\:info::before {
