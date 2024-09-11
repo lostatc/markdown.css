@@ -4,6 +4,8 @@
 This is something you should take note of.
 ```
 
+[Link](https://example.com), **Strong**, *Emphasis*, ***Both***, ~~Strikethrough~~, `code`
+
 Lorem ipsum odor amet, consectetuer adipiscing elit. Vel libero nascetur quam
 diam felis, litora luctus risus. Placerat parturient ligula sed tempus vel ac
 erat odio. Nascetur mi vulputate rutrum morbi vulputate. 
