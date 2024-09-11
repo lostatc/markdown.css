@@ -13,6 +13,10 @@
   --warning-bg-color: #fff9e6;
   --warning-border-color: #ffe7a3;
 
+  --danger-fg-color: #fc8d93;
+  --danger-bg-color: #fcebec;
+  --danger-border-color: #fcc2c5;
+
   --callout-padding: 0.5rem;
   --callout-border-radius: 0.4rem;
 
@@ -64,6 +68,21 @@ pre.callout\:warning::before {
 pre.callout\:warning {
   background-color: var(--warning-bg-color);
   border: 1px solid var(--warning-border-color);
+  padding: var(--callout-padding);
+  border-radius: var(--callout-border-radius);
+}
+
+pre.callout\:danger::before {
+  display: block;
+  content: "⛔️ Danger";
+  font-size: var(--callout-header-font-size);
+  font-weight: var(--callout-header-font-weight);
+  color: var(--danger-fg-color);
+}
+
+pre.callout\:danger {
+  background-color: var(--danger-bg-color);
+  border: 1px solid var(--danger-border-color);
   padding: var(--callout-padding);
   border-radius: var(--callout-border-radius);
 }
