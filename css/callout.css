@@ -16,25 +16,72 @@
   --danger-border-color: #fcc2c5;
 }
 
+@font-face {
+  font-family: "Fira Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Fira Sans Regular"),
+    url("../fonts/FiraSans-Regular.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Fira Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: local("Fira Sans Italic"),
+    url("../fonts/FiraSans-Italic.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Fira Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: local("Fira Sans SemiBold"),
+    url("../fonts/FiraSans-SemiBold.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Fira Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Fira Sans Bold"), url("../fonts/FiraSans-Bold.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Fira Sans";
+  font-style: italic;
+  font-weight: 700;
+  src: local("Fira Sans Bold Italic"),
+    url("../fonts/FiraSans-BoldItalic.ttf") format("ttf");
+}
+
+body {
+  font-family: "Fira Sans", sans-serif;
+}
+
 /* TODO: Use a sans-serif font for callouts. */
 
-pre.callout\:info::before,
-pre.callout\:tip::before,
-pre.callout\:warning::before,
-pre.callout\:danger::before {
+pre:is(
+    .callout\:info,
+    .callout\:tip,
+    .callout\:warning,
+    .callout\:danger
+  )::before {
+  font-family: "Fira Sans", sans-serif;
   display: block;
   font-size: 0.8rem;
   font-weight: 600;
 }
 
-pre.callout\:info,
-pre.callout\:tip,
-pre.callout\:warning,
-pre.callout\:danger {
+pre:is(.callout\:info, .callout\:tip, .callout\:warning, .callout\:danger) {
   border-width: 1px;
   border-style: solid;
   padding: 0.5rem;
   border-radius: 0.4rem;
+}
+pre:is(.callout\:info, .callout\:tip, .callout\:warning, .callout\:danger)
+  > code {
+  font-family: "Fira Sans", sans-serif;
 }
 
 pre.callout\:info::before {
