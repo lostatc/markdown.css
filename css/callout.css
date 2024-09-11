@@ -1,7 +1,8 @@
 :root {
   --fg-color: #222f3d;
   --bg-color: #ffffff;
-  --primary-color: #42b983;
+  --primary-fg-color: #42b983;
+  --primary-bg-color: #f7fffc;
   --ghost-fg-color: #bababa;
   --ghost-bg-color: #fbfbfb;
   --code-fg-color: #e96a04;
@@ -202,7 +203,7 @@ hr {
 }
 
 a {
-  color: var(--primary-color);
+  color: var(--primary-fg-color);
   font-weight: 600;
 }
 
@@ -226,6 +227,23 @@ pre {
   background-color: var(--ghost-bg-color);
   padding: 0.6rem;
   border-radius: 0.1rem;
+}
+
+blockquote {
+  margin: 0;
+  padding: 0.6rem;
+  padding-left: 1.5rem;
+  border-left: 4px solid var(--primary-fg-color);
+  background-color: var(--primary-bg-color);
+  break-inside: avoid;
+}
+
+blockquote > p:first-child {
+  margin-top: 0;
+}
+
+blockquote > p:last-child {
+  margin-bottom: 0;
 }
 
 ol,
