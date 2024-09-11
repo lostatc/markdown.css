@@ -1,6 +1,6 @@
 # Test Document
 
-## heading
+## Heading
 
 Lorem ipsum odor amet, consectetuer adipiscing elit. Scelerisque libero
 himenaeos vel; id commodo est senectus non. Arcu class montes fames molestie
@@ -8,27 +8,27 @@ orci. Magnis vulputate turpis non ex aliquam. Sollicitudin in habitasse
 hendrerit inceptos dapibus euismod sit ligula. Penatibus magna ipsum porttitor
 ultricies, lobortis pretium fames praesent ornare.
 
-### heading
+### Heading
 
 paragraph text
 
-### heading
+### Heading
 
 paragraph text
 
-#### heading
+#### Heading
 
 paragraph text
 
-##### heading
+##### Heading
 
 paragraph text
 
-###### heading
+###### Heading
 
 paragraph text
 
-## heading
+## Heading
 
 Nulla porta class mi lacinia sapien suspendisse tellus sapien. Elit velit
 rutrum proin habitant habitant himenaeos primis aliquam eu. Primis per amet
