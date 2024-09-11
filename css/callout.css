@@ -1,0 +1,46 @@
+:root {
+  --fg-color: #000000;
+
+  --info-bg-color: #f0f6ff;
+  --info-border-color: #a8cbff;
+
+  --tip-bg-color: #fbfffa;
+  --tip-border-color: #caf0c0;
+
+  --callout-padding: 0.5rem;
+  --callout-border-radius: 0.4rem;
+
+  --callout-header-fg-color: #7f7f7f;
+  --callout-header-font-size: 0.8rem;
+  --callout-header-font-weight: 600;
+}
+
+pre.callout\:info::before {
+  display: block;
+  content: "ℹ️ Info";
+  font-size: var(--callout-header-font-size);
+  font-weight: var(--callout-header-font-weight);
+  color: var(--callout-header-fg-color);
+}
+
+pre.callout\:info {
+  background-color: var(--info-bg-color);
+  border: 1px solid var(--info-border-color);
+  padding: var(--callout-padding);
+  border-radius: var(--callout-border-radius);
+}
+
+pre.callout\:tip::before {
+  display: block;
+  content: "💡 Tip";
+  font-size: var(--callout-header-font-size);
+  font-weight: var(--callout-header-font-weight);
+  color: var(--callout-header-fg-color);
+}
+
+pre.callout\:tip {
+  background-color: var(--tip-bg-color);
+  border: 1px solid var(--tip-border-color);
+  padding: var(--callout-padding);
+  border-radius: var(--callout-border-radius);
+}
