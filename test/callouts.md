@@ -4,11 +4,6 @@
 This is something you should take note of.
 ```
 
-[Link](https://example.com), **Strong**, *Emphasis*, ***Both***, ~~Strikethrough~~, `code`
-
-Lorem ipsum odor amet, consectetuer adipiscing elit. Vel libero nascetur quam
-diam felis, litora luctus risus.
-
 ```callout:tip
 Here's a tip to get you started.
 ```
@@ -30,6 +25,11 @@ fn fibonacci(n: u32) -> u32 {
     }
 }
 ```
+
+[Link](https://example.com), **Strong**, *Emphasis*, ***Both***, ~~Strikethrough~~, `code`
+
+Lorem ipsum odor amet, consectetuer adipiscing elit. Vel libero nascetur quam
+diam felis, litora luctus risus.
 
 ---
 
