@@ -10,8 +10,8 @@
   --ghost-bg-color: #f4f4f4;
   --border-color: #dcdcdc;
 
-  --title-weight: 400;
-  --heading-weight: 400;
+  --title-weight: 700;
+  --heading-weight: 500;
   --body-weight: 300;
   --bold-weight: 600;
   --ol-marker-weight: 300;
@@ -19,11 +19,35 @@
 }
 
 @font-face {
-  font-family: "Roboto Slab";
+  font-family: "Montserrat";
   font-style: normal;
-  font-weight: 400;
-  src: local("Roboto Slab Regular"),
-    url("../fonts/RobotoSlab-VariableFont_wght.ttf") format("ttf");
+  font-weight: 500;
+  src: local("Montserrat Medium"),
+    url("../fonts/Montserrat-VariableFont_wght.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: italic;
+  font-weight: 500;
+  src: local("Montserrat Medium Italic"),
+    url("../fonts/Montserrat-Italic-VariableFont_wght.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Montserrat Bold"),
+    url("../fonts/Montserrat-VariableFont_wght.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: italic;
+  font-weight: 700;
+  src: local("Montserrat Bold Italic"),
+    url("../fonts/Montserrat-Italic-VariableFont_wght.ttf") format("ttf");
 }
 
 @font-face {
@@ -136,7 +160,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Roboto Slab", serif;
+  font-family: "Montserrat", serif;
 }
 
 h1 {
@@ -150,7 +174,7 @@ h4,
 h5,
 h6 {
   font-weight: var(--heading-weight);
-  font-size: 1.3em;
+  font-size: 1.25em;
   margin-top: 0;
   margin-bottom: 0;
 }
