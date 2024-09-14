@@ -274,6 +274,24 @@ ul > li::marker {
   font-weight: var(--ul-marker-weight);
 }
 
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table :is(th, td) {
+  border: 1px solid var(--ghost-fg-color);
+  padding: 0.4rem;
+}
+
+table > thead {
+  background-color: var(--ghost-bg-color);
+}
+
+table > tbody > tr:nth-child(even) {
+  background-color: var(--ghost-bg-color);
+}
+
 pre:is(
     .callout\:info,
     .callout\:tip,
