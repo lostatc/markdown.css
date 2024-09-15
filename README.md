@@ -6,7 +6,7 @@ files as pretty PDFs via Pandoc/Weasyprint.
 To render a markdown file with the `beryl` theme using Pandoc:
 
 ```shell
-pandoc --pdf-engine weasyprint --css ./themes/beryl.css -s -o output.pdf input.md
+pandoc --pdf-engine weasyprint --css ./themes/beryl.css -o output.pdf input.md
 ```
 
 ## Callouts
