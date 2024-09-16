@@ -262,6 +262,7 @@ pre {
   border-radius: 0.2rem;
   background-color: var(--ghost-bg-color);
   border: 1px solid var(--ghost-fg-color);
+  break-inside: avoid;
 }
 
 code {

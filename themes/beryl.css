@@ -227,6 +227,7 @@ pre {
   background-color: var(--ghost-bg-color);
   padding: 0.6rem;
   border-radius: 0.1rem;
+  break-inside: avoid;
 }
 
 blockquote {
