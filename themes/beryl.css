@@ -134,6 +134,7 @@ h3,
 h4,
 h5,
 h6 {
+  margin-top: 1rem;
   margin-bottom: 0;
 }
 
@@ -200,6 +201,8 @@ h6::before {
 hr {
   border: 0;
   border-top: 1px solid var(--ghost-fg-color);
+  margin-top: 1.6rem;
+  margin-bottom: 1.6rem;
 }
 
 a {
