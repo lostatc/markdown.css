@@ -9,26 +9,24 @@ To render a markdown file with the `beryl` theme using Pandoc:
 pandoc --pdf-engine weasyprint --css ./themes/beryl.css -o output.pdf input.md
 ```
 
+## Themes
+
+Below are examples of each theme provided in this repository.
+
+### Beryl
+
+- [Headings, inline markup, blockquotes, lists](./examples/beryl-typography.pdf)
+- [Code blocks, tables](./examples/beryl-data.pdf)
+- [Callouts](./examples/beryl-callouts.pdf)
+
+### Stain
+
+- [Headings, inline markup, blockquotes, lists](./examples/stain-typography.pdf)
+- [Code blocks, tables](./examples/stain-data.pdf)
+
 ## Callouts
 
-The `beryl` theme supports callouts, implemented entirely in CSS.
+The Beryl theme supports callouts, implemented entirely in CSS.
 
-![Screenshot of different callouts in a PDF document](./examples/callouts.png)
-
-````
-```callout:info
-This is something you should take note of.
-```
-
-```callout:tip
-Here's a tip to get you started.
-```
-
-```callout:warning
-Be cautious when you do this.
-```
-
-```callout:danger
-This is a dangerous operation; you should never do this.
-```
-````
+- [Markdown syntax example](./examples/callouts.md)
+- [Generated PDF example](./examples/beryl-callouts.png)
