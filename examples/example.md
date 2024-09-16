@@ -1,4 +1,4 @@
-# Test Document
+# Example Document
 
 Lorem ipsum odor amet, consectetuer adipiscing elit. Scelerisque libero
 himenaeos vel; id commodo est senectus non.
