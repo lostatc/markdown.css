@@ -222,3 +222,20 @@ pre > code::after {
   display: block;
   content: "```";
 }
+
+table {
+  border-collapse: separate;
+  border-spacing: 6px;
+}
+
+table :is(th, td) {
+  border-left: 1px solid var(--ghost-fg-color);
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+table :is(th, td):last-child {
+  border-right: 1px solid var(--ghost-fg-color);
+}
