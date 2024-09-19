@@ -24,6 +24,11 @@ Below are examples of each theme provided in this repository.
 - [Headings, inline markup, blockquotes, lists](./examples/stain-typography.png)
 - [Code blocks, tables](./examples/stain-data.png)
 
+### Mark
+
+- [Headings, inline markup, blockquotes, lists](./examples/mark-typography.png)
+- [Code blocks, tables](./examples/mark-data.png)
+
 ## Callouts
 
 The Beryl theme supports callouts, implemented entirely in CSS.
