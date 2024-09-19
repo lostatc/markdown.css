@@ -2,7 +2,6 @@
   --fg-color: #000000;
   --bg-color: #ffffff;
   --ghost-fg-color: #a3a3a3;
-  --ghost-bg-color: #fbfbfb;
   --link-color: #0969da;
 
   --base-font-size: 11pt;
@@ -203,4 +202,23 @@ li {
 
 ul > li {
   list-style-type: "*";
+}
+
+pre {
+  font-family: "Fira Mono", monospace;
+  break-inside: avoid;
+}
+
+pre > code::before {
+  font-family: "Fira Mono", monospace;
+  color: var(--ghost-fg-color);
+  display: block;
+  content: "```";
+}
+
+pre > code::after {
+  font-family: "Fira Mono", monospace;
+  color: var(--ghost-fg-color);
+  display: block;
+  content: "```";
 }
