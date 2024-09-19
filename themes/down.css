@@ -3,6 +3,7 @@
   --bg-color: #ffffff;
   --ghost-fg-color: #a3a3a3;
   --ghost-bg-color: #fbfbfb;
+  --link-color: #0969da;
 
   --base-font-size: 11pt;
   --heading-font-size: 14pt;
@@ -158,4 +159,8 @@ del::after {
 :not(pre) > code::after {
   content: "`";
   color: var(--ghost-fg-color);
+}
+
+a {
+  color: var(--link-color);
 }
