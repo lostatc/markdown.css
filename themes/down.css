@@ -164,3 +164,41 @@ del::after {
 a {
   color: var(--link-color);
 }
+
+blockquote {
+  margin-left: 0;
+  padding-left: 1.5rem;
+  border-left: 4px solid var(--fg-color);
+  break-inside: avoid;
+}
+
+hr {
+  border: 0;
+  margin-top: 1.6rem;
+  margin-bottom: 1.6rem;
+  border-top: 1px solid var(--fg-color);
+}
+
+ol,
+ul {
+  padding-left: 1rem;
+  line-height: 1.25;
+}
+
+/* 
+ * This affects the padding of lists relative to the page, but not the padding
+ * of nested lists relative to their parent list.
+ */
+
+:not(li) > ol,
+:not(li) > ul {
+  padding-left: 2rem;
+}
+
+li {
+  text-indent: 4px;
+}
+
+ul > li {
+  list-style-type: "*";
+}
