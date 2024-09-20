@@ -1,0 +1,58 @@
+:root {
+  --fg-color: #3c4257;
+  --bg-color: #ffffff;
+  --primary-fg-color: #3056d5;
+  --primary-bg-color: #212d63;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Inter Regular"),
+    url("../fonts/Inter-VariableFont_opsz\,wght.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: italic;
+  font-weight: 400;
+  src: local("Inter Italic"),
+    url("../fonts/Inter-Italic-VariableFont_opsz\,wght.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Inter Bold"),
+    url("../fonts/Inter-VariableFont_opsz\,wght.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: italic;
+  font-weight: 700;
+  src: local("Inter Bold Italic"),
+    url("../fonts/Inter-Italic-VariableFont_opsz\,wght.ttf") format("ttf");
+}
+
+@page {
+  size: letter;
+
+  margin-left: 0.5in;
+  margin-right: 0.5in;
+  margin-top: 0.5in;
+  margin-bottom: 0.5in;
+
+  background-color: var(--bg-color);
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: var(--fg-color);
+}
+
+a {
+  color: var(--primary-fg-color);
+}
