@@ -120,6 +120,17 @@ h6::before {
   content: "###### ";
 }
 
+strong::before,
+strong::after,
+em::before,
+em::after,
+del::before,
+del::after {
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+}
+
 strong::before {
   content: "**";
   color: var(--ghost-fg-color);
