@@ -38,11 +38,27 @@ Below are examples of each theme provided in this repository.
 
 The Beryl theme supports callouts, implemented entirely in CSS.
 
-- [Markdown syntax example](./examples/callouts.md)
+- [Markdown syntax example](./examples/beryl-callouts.md)
 - [Generated PDF example](./examples/beryl-callouts.png)
 
-## Generating Examples
+## Page layout
+
+These stylesheets use US Letter size pages by default. You can configure the
+page size and margins by modifying the `@page` rule near the top of each CSS
+file.
+
+To use A4 size pages instead:
+
+```css
+@page {
+  size: A4;
+  margin: 0.5in;
+  background-color: var(--bg-color);
+}
+```
+
+## Generating examples
 
 The example images in this repo are generated using the
 [Nushell](https://www.nushell.sh/) script
-[render-examples.nu](./render-examples.nu).
+[./render-examples.nu](./render-examples.nu).
