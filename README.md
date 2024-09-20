@@ -1,13 +1,16 @@
 # markdown.css
 
 This repository contains a collection of CSS stylesheets for rendering markdown
-files as pretty PDFs via Pandoc/Weasyprint.
+files as pretty PDFs via Pandoc/WeasyPrint.
 
 To render a markdown file with the Beryl theme using Pandoc:
 
 ```shell
 pandoc --pdf-engine weasyprint --css ./themes/beryl.css -o output.pdf input.md
 ```
+
+*WeasyPrint is the default PDF engine as of Pandoc 3.4. If you're running
+Pandoc 3.4 or higher, you can omit the `--pdf-engine weasyprint` parameter.*
 
 ## Themes
 
