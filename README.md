@@ -40,3 +40,9 @@ The Beryl theme supports callouts, implemented entirely in CSS.
 
 - [Markdown syntax example](./examples/callouts.md)
 - [Generated PDF example](./examples/beryl-callouts.png)
+
+## Generating Examples
+
+The example images in this repo are generated using the
+[Nushell](https://www.nushell.sh/) script
+[render-examples.nu](./render-examples.nu).
