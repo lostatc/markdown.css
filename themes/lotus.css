@@ -167,3 +167,25 @@ li > ol,
 li > ul {
   padding-left: 1rem;
 }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table :is(th, td) {
+  border: 1px solid var(--primary-light-color);
+  padding: 0.4rem;
+}
+
+table > thead {
+  background-color: var(--primary-ghost-color);
+}
+
+table > thead > tr > th {
+  border-bottom: 2px solid var(--primary-color);
+}
+
+table > tbody > tr:nth-child(even) {
+  background-color: var(--primary-ghost-color);
+}
