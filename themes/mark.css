@@ -8,6 +8,12 @@
   --heading-font-size: 14pt;
 }
 
+@page {
+  size: letter;
+  margin: 0.5in;
+  background-color: var(--bg-color);
+}
+
 @font-face {
   font-family: "Zilla Slab";
   font-style: normal;
@@ -53,17 +59,6 @@
   font-style: normal;
   font-weight: 700;
   src: local("Fira Mono Bold"), url("../fonts/FiraMono-Bold.ttf") format("ttf");
-}
-
-@page {
-  size: letter;
-
-  margin-left: 0.5in;
-  margin-right: 0.5in;
-  margin-top: 0.5in;
-  margin-bottom: 0.5in;
-
-  background-color: var(--bg-color);
 }
 
 body {

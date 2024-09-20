@@ -18,6 +18,12 @@
   --ul-marker-weight: 800;
 }
 
+@page {
+  size: letter;
+  margin: 0.5in;
+  background-color: var(--bg-color);
+}
+
 @font-face {
   font-family: "Montserrat";
   font-style: normal;
@@ -133,17 +139,6 @@
   font-weight: 700;
   src: local("Fira Code Bold"),
     url("../fonts/FiraCode-VariableFont_wght.ttf") format("ttf");
-}
-
-@page {
-  size: letter;
-
-  margin-left: 0.5in;
-  margin-right: 0.5in;
-  margin-top: 0.5in;
-  margin-bottom: 0.5in;
-
-  background-color: var(--bg-color);
 }
 
 body {
