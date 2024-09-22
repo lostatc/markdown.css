@@ -10,9 +10,7 @@ def render [md: path, img: path, css: path] {
     pandoc --pdf-engine weasyprint --css $css --to pdf --output - $md | magick -density $image_density - $img
 }
 
-let theme_paths = ls ./themes/ | get name
-
-for $theme_path in $theme_paths {
+ls ./themes/ | get name | par-each { |theme_path|
     let theme_name = $theme_path | path parse | get stem
 
     render ./examples/typography.md $"./examples/($theme_name)-typography.png" $theme_path
