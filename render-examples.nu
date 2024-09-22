@@ -7,7 +7,11 @@ def render [md: path, img: path, css: path] {
     # them won't result in a new file needing to be committed to the repo.
     $env.SOURCE_DATE_EPOCH = 0
 
-    pandoc --pdf-engine weasyprint --css $css --to pdf --output - $md | magick -density $image_density - $img
+    let pdf = pandoc --pdf-engine weasyprint --css $css --to pdf --output - $md | complete
+
+    $pdf.stdout | magick -density $image_density - $img
+
+    $pdf.stderr
 }
 
 let theme_paths = ls ./themes/ | get name
@@ -35,6 +39,16 @@ $examples ++= {
     css: ./themes/beryl.css,
 }
 
-$examples | par-each { |example|
-    render $example.md $example.img $example.css
-} | ignore
+let images = $examples | par-each { |example|
+    let stderr = render $example.md $example.img $example.css
+
+    {
+        path: $example.css
+        logs: $stderr
+    }
+}
+
+for $img in $images {
+    print $"(ansi white_bold)Generated (ansi cyan_bold)($img.path)(ansi reset)\n"
+    print $img.logs
+}
