@@ -3,6 +3,10 @@
 let image_density = 300
 
 def render [md: path, img: path, css: path] {
+    # This makes the generated PDFs reproducible, meaning that regenerating
+    # them won't result in a new file needing to be committed to the repo.
+    $env.SOURCE_DATE_EPOCH = 0
+
     pandoc --pdf-engine weasyprint --css $css --to pdf --output - $md | magick -density $image_density - $img
 }
 
