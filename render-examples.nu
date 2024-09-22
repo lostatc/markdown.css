@@ -1,6 +1,6 @@
 #!/usr/bin/env nu
 
-let image_density = 300
+const image_density = 300
 
 def render [md: path, img: path, css: path] {
     # This makes the generated PDFs reproducible, meaning that regenerating
@@ -10,11 +10,31 @@ def render [md: path, img: path, css: path] {
     pandoc --pdf-engine weasyprint --css $css --to pdf --output - $md | magick -density $image_density - $img
 }
 
-ls ./themes/ | get name | par-each { |theme_path|
+let theme_paths = ls ./themes/ | get name
+mut examples = []
+
+for $theme_path in $theme_paths {
     let theme_name = $theme_path | path parse | get stem
 
-    render ./examples/typography.md $"./examples/($theme_name)-typography.png" $theme_path
-    render ./examples/data.md $"./examples/($theme_name)-data.png" $theme_path
+    $examples ++= {
+        md: ./examples/typography.md,
+        img: $"./examples/($theme_name)-typography.png",
+        css: $theme_path,
+    }
+
+    $examples ++= {
+        md: ./examples/data.md,
+        img: $"./examples/($theme_name)-data.png",
+        css: $theme_path,
+    }
 }
 
-render ./examples/callouts.md ./examples/beryl-callouts.png ./themes/beryl.css
+$examples ++= {
+    md: ./examples/callouts.md,
+    img: ./examples/beryl-callouts.png,
+    css: ./themes/beryl.css,
+}
+
+$examples | par-each { |example|
+    render $example.md $example.img $example.css
+} | ignore
