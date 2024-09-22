@@ -11,6 +11,8 @@ def render [md: path, img: path, css: path] {
 
     $pdf.stdout | magick -density $image_density - $img
 
+    print -e $"(ansi white_bold)Generated (ansi cyan_bold)($img)(ansi reset)"
+
     $pdf.stderr
 }
 
@@ -43,12 +45,14 @@ let images = $examples | par-each { |example|
     let stderr = render $example.md $example.img $example.css
 
     {
-        path: $example.css
+        path: $example.img
         logs: $stderr
     }
 }
 
+print -en "\n"
+
 for $img in $images {
-    print $"(ansi white_bold)Generated (ansi cyan_bold)($img.path)(ansi reset)\n"
-    print $img.logs
+    print -e $"(ansi cyan_bold)($img.path)(ansi reset)\n"
+    print -e $img.logs
 }
