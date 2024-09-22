@@ -1,6 +1,6 @@
 #!/usr/bin/env nu
 
-let image_density = 200
+let image_density = 300
 
 def render [md: path, img: path, css: path] {
     pandoc --pdf-engine weasyprint --css $css --to pdf --output - $md | magick -density $image_density - $img
