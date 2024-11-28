@@ -195,3 +195,7 @@ table > thead > tr > th {
 table > tbody > tr:nth-child(even) {
   background-color: var(--primary-ghost-color);
 }
+
+img {
+  width: 100%;
+}

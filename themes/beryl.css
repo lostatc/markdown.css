@@ -293,6 +293,10 @@ table > tbody > tr:nth-child(even) {
   background-color: var(--ghost-bg-color);
 }
 
+img {
+  width: 100%;
+}
+
 pre:is(
     .callout\:info,
     .callout\:tip,

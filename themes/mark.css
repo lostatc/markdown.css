@@ -245,3 +245,7 @@ table :is(th, td) {
 table :is(th, td):last-child {
   border-right: 1px solid var(--ghost-fg-color);
 }
+
+img {
+  width: 100%;
+}
